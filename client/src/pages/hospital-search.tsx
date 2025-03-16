@@ -49,7 +49,7 @@ export default function HospitalSearch() {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSpecialty, setSelectedSpecialty] = useState("All Specialties");
-  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedCity, setSelectedCity] = useState("All Cities");
   
   // Fetch hospitals
   const { data: hospitals = [], isLoading: isLoadingHospitals } = useQuery<Hospital[]>({
@@ -69,7 +69,7 @@ export default function HospitalSearch() {
       ? hospital.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         hospital.city.toLowerCase().includes(searchQuery.toLowerCase())
       : true;
-    const matchesCity = selectedCity 
+    const matchesCity = selectedCity !== "All Cities"
       ? hospital.city === selectedCity 
       : true;
     
@@ -141,7 +141,7 @@ export default function HospitalSearch() {
                       <SelectValue placeholder="City" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Cities</SelectItem>
+                      <SelectItem value="All Cities">All Cities</SelectItem>
                       {cities.map((city) => (
                         <SelectItem key={city} value={city}>
                           {city}
