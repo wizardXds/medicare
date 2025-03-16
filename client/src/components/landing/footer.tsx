@@ -94,9 +94,9 @@ function FooterLink({ href, label, small = false }: { href: string; label: strin
   return (
     <li>
       <Link href={href}>
-        <a className={`${small ? 'text-sm' : ''} text-neutral-300 hover:text-white transition-colors`}>
+        <span className={`${small ? 'text-sm' : ''} text-neutral-300 hover:text-white transition-colors cursor-pointer`}>
           {label}
-        </a>
+        </span>
       </Link>
     </li>
   );

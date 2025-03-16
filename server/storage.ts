@@ -126,6 +126,46 @@ export class MemStorage implements IStorage {
       dob: "1980-01-01",
     });
     
+    // Add sample doctors
+    this.createUser({
+      username: "drsmith",
+      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      firstName: "John",
+      lastName: "Smith",
+      email: "dr.smith@medicare.com",
+      role: "doctor",
+      phone: "555-111-2222",
+      dob: "1975-05-15",
+      specialty: "Cardiology",
+      bio: "Dr. Smith is a board-certified cardiologist with over 15 years of experience in treating cardiovascular diseases."
+    });
+    
+    this.createUser({
+      username: "drjones",
+      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      firstName: "Sarah",
+      lastName: "Jones",
+      email: "dr.jones@medicare.com",
+      role: "doctor",
+      phone: "555-333-4444",
+      dob: "1982-09-23",
+      specialty: "Pediatrics",
+      bio: "Dr. Jones specializes in pediatric care and has a passion for helping children maintain optimal health."
+    });
+    
+    this.createUser({
+      username: "drwilliams",
+      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      firstName: "Michael",
+      lastName: "Williams",
+      email: "dr.williams@medicare.com",
+      role: "doctor",
+      phone: "555-555-6666",
+      dob: "1978-12-10",
+      specialty: "Orthopedics",
+      bio: "Dr. Williams is an orthopedic surgeon specializing in sports medicine and joint replacement surgery."
+    });
+    
     // Add sample hospitals
     this.createHospital({
       name: "City General Hospital",
