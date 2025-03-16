@@ -13,6 +13,10 @@ import DoctorDashboard from "@/pages/doctor-dashboard";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AppointmentBooking from "@/pages/appointment-booking";
 import MedicalRecords from "@/pages/medical-records";
+import Prescriptions from "@/pages/prescriptions";
+import Messages from "@/pages/messages";
+import Payments from "@/pages/payments";
+import LabResults from "@/pages/lab-results";
 import SettingsPage from "@/pages/settings-page";
 import HospitalSearch from "@/pages/hospital-search";
 import NotFound from "@/pages/not-found";
@@ -28,6 +32,10 @@ function Router() {
       <ProtectedRoute path="/admin-dashboard" component={AdminDashboard} />
       <ProtectedRoute path="/appointment-booking" component={AppointmentBooking} />
       <ProtectedRoute path="/medical-records" component={MedicalRecords} />
+      <ProtectedRoute path="/prescriptions" component={Prescriptions} />
+      <ProtectedRoute path="/messages" component={Messages} />
+      <ProtectedRoute path="/payments" component={Payments} />
+      <ProtectedRoute path="/lab-results" component={LabResults} />
       <ProtectedRoute path="/settings" component={SettingsPage} />
       <ProtectedRoute path="/hospitals" component={HospitalSearch} />
       
