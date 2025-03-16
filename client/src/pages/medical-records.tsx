@@ -13,7 +13,7 @@ import {
   Download,
   Eye,
   Pill,
-  Vial,
+  TestTube,
   Stethoscope,
   FileUp,
   Search,
@@ -30,12 +30,13 @@ import {
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
-import { useSearchParams } from "wouter";
+import { useLocation } from "wouter";
 
 export default function MedicalRecords() {
   const { user } = useAuth();
-  const [params] = useSearchParams();
-  const patientIdFromParams = params.get("patientId");
+  const [location] = useLocation();
+  const searchParams = new URLSearchParams(location.split('?')[1] || '');
+  const patientIdFromParams = searchParams.get("patientId");
   const [selectedPatientId, setSelectedPatientId] = useState<number>(
     patientIdFromParams ? parseInt(patientIdFromParams) : user?.id || 0
   );
@@ -64,7 +65,7 @@ export default function MedicalRecords() {
       case "consultation":
         return <Stethoscope className="h-4 w-4 text-blue-500" />;
       case "lab_result":
-        return <Vial className="h-4 w-4 text-purple-500" />;
+        return <TestTube className="h-4 w-4 text-purple-500" />;
       case "prescription":
         return <Pill className="h-4 w-4 text-green-500" />;
       default:
