@@ -31,9 +31,9 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/">
-              <a className="text-primary font-bold text-2xl">
+              <span className="text-primary font-bold text-2xl cursor-pointer">
                 MediCare<span className="text-green-500">+</span>
-              </a>
+              </span>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
@@ -81,9 +81,9 @@ function NavLink({ href, label }: { href: string, label: string }) {
   
   return (
     <Link href={href}>
-      <a className={`font-medium ${isActive ? "text-primary" : "text-neutral-600"} hover:text-primary transition-colors`}>
+      <span className={`font-medium ${isActive ? "text-primary" : "text-neutral-600"} hover:text-primary transition-colors cursor-pointer`}>
         {label}
-      </a>
+      </span>
     </Link>
   );
 }
