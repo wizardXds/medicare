@@ -17,6 +17,7 @@ import {
 import session from "express-session";
 import createMemoryStore from "memorystore";
 
+
 const MemoryStore = createMemoryStore(session);
 
 export interface IStorage {
@@ -117,7 +118,7 @@ export class MemStorage implements IStorage {
     // Add a sample admin user
     this.createUser({
       username: "admin",
-      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      password: "$2b$10$gB.Uef264de3KMctoKm2iexMw9R6KBCfPZxBchYVUUtfSZBm4lVAa", // 'password' hashed
       firstName: "Admin",
       lastName: "User",
       email: "admin@medicare.com",
@@ -129,7 +130,7 @@ export class MemStorage implements IStorage {
     // Add sample doctors
     this.createUser({
       username: "drsmith",
-      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      password: "$2b$10$gB.Uef264de3KMctoKm2iexMw9R6KBCfPZxBchYVUUtfSZBm4lVAa", // 'password' hashed
       firstName: "John",
       lastName: "Smith",
       email: "dr.smith@medicare.com",
@@ -142,7 +143,7 @@ export class MemStorage implements IStorage {
     
     this.createUser({
       username: "drjones",
-      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      password: "$2b$10$gB.Uef264de3KMctoKm2iexMw9R6KBCfPZxBchYVUUtfSZBm4lVAa", // 'password' hashed
       firstName: "Sarah",
       lastName: "Jones",
       email: "dr.jones@medicare.com",
@@ -155,7 +156,7 @@ export class MemStorage implements IStorage {
     
     this.createUser({
       username: "drwilliams",
-      password: "$2b$10$X/nq7iYvWOvjF3CigiVRYOUmZA/KePHOgBK/hFBY4HnhvXwCdEUfS", // 'password' hashed
+      password: "$2b$10$gB.Uef264de3KMctoKm2iexMw9R6KBCfPZxBchYVUUtfSZBm4lVAa", // 'password' hashed
       firstName: "Michael",
       lastName: "Williams",
       email: "dr.williams@medicare.com",
